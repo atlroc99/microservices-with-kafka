@@ -1,4 +1,4 @@
-package com.mz.kafka.dto;
+package com.mz.kafka.api.request;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
@@ -15,10 +15,10 @@ import java.util.List;
 @AllArgsConstructor
 @ToString
 @Builder
-public class OrderDto {
+public class OrderRequest {
     private String orderNumber;
     private String orderLocation;
-    private List<OrderItemDto> orderItemDtos;
+    private List<OrderItemRequest> orderItemDtos;
 
     @JsonProperty("order-creation-date")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
